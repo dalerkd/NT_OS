@@ -1,0 +1,993 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="cache">
+      <UniqueIdentifier>{aead2914-e26c-4ef5-a157-82f79883ce64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cache\section">
+      <UniqueIdentifier>{94cb6cbe-3f77-41bf-9818-ae11bf91ec82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cc">
+      <UniqueIdentifier>{0313399c-bdca-49f2-981f-16cc42bfc670}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ex">
+      <UniqueIdentifier>{f188a2ec-5278-4337-9b0a-8005d80a3686}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ex\i386">
+      <UniqueIdentifier>{4c89bd03-47cb-4726-bed2-b65c3c606143}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fsrtl">
+      <UniqueIdentifier>{638cd5c6-1f5a-47f5-84bb-08c1e32fd4db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fstub">
+      <UniqueIdentifier>{b72bebc7-849d-4c19-9b5f-fc8e723a0a83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inbv">
+      <UniqueIdentifier>{b47d5892-dce5-4db3-9a9f-d20aafe67bc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ke">
+      <UniqueIdentifier>{89395c92-ccd8-4b15-8534-24a76ae1f8ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ke\i386">
+      <UniqueIdentifier>{7a998158-3692-4984-98ed-f97a3f404a0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lpc">
+      <UniqueIdentifier>{fca1de5b-f3b4-4d83-a3d0-5c969e8990cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="po">
+      <UniqueIdentifier>{567e92f3-3f3c-4090-ad4a-0d081e343eb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rtl">
+      <UniqueIdentifier>{f6124433-56da-4400-abef-5c52bc1f1dd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rtl\i386">
+      <UniqueIdentifier>{e842595f-9d80-4ccd-b6a3-1c5b117569e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="se">
+      <UniqueIdentifier>{8ee5a7f7-3329-4e1d-8fb3-5066519afa51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vdm">
+      <UniqueIdentifier>{71560613-e26b-4fa9-a5c9-e97e77b0b148}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vf">
+      <UniqueIdentifier>{b3287291-9e9b-4360-9db1-40b0278a674b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="wmi">
+      <UniqueIdentifier>{d0ca2fac-3f56-43a7-ac0b-407a80d48b79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dbgk">
+      <UniqueIdentifier>{106bedc0-f24c-4cc6-bb0d-6d4ba44e86b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mm">
+      <UniqueIdentifier>{3e50fb3a-bfc9-4bf6-b11b-2a81742fc450}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mm\i386">
+      <UniqueIdentifier>{8b78924f-e4c4-4372-93ca-42defb7e1abc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mm\ARM3">
+      <UniqueIdentifier>{5a42bd51-3629-46a1-bab2-6f1e4f3998ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mm\ARM3\i386">
+      <UniqueIdentifier>{56cada06-485b-4041-aa74-b89c12773387}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ob">
+      <UniqueIdentifier>{e87d6fa8-1050-4c6f-a302-4e8e68b8ae41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ps">
+      <UniqueIdentifier>{c9fb7860-1bf7-4534-a708-8b7592f5e92a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ps\i386">
+      <UniqueIdentifier>{ca8a4ea4-5d16-49cb-9e62-24144b0ff95a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config">
+      <UniqueIdentifier>{d0cab8ca-444d-4b01-be07-c08c1eaa3353}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config\cmlib">
+      <UniqueIdentifier>{b39faf31-b52e-4555-b5dd-b657bd1fe4a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config\i386">
+      <UniqueIdentifier>{4cdb26a5-1c21-41e1-86ea-e9315fef80e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io">
+      <UniqueIdentifier>{8d4243ee-0f29-4303-9ab2-90abff9ceaf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io\iomgr">
+      <UniqueIdentifier>{adb4a489-7f6a-48d1-8071-099356074c93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io\pnpmgr">
+      <UniqueIdentifier>{08ddf7e5-d945-4b8f-a08f-4d1d4c52b139}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ntoskrnl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cache\section\data.c">
+      <Filter>cache\section</Filter>
+    </ClCompile>
+    <ClCompile Include="cache\section\fault.c">
+      <Filter>cache\section</Filter>
+    </ClCompile>
+    <ClCompile Include="cache\section\io.c">
+      <Filter>cache\section</Filter>
+    </ClCompile>
+    <ClCompile Include="cache\section\reqtools.c">
+      <Filter>cache\section</Filter>
+    </ClCompile>
+    <ClCompile Include="cache\section\sptab.c">
+      <Filter>cache\section</Filter>
+    </ClCompile>
+    <ClCompile Include="cache\section\swapout.c">
+      <Filter>cache\section</Filter>
+    </ClCompile>
+    <ClCompile Include="cc\cacheman.c">
+      <Filter>cc</Filter>
+    </ClCompile>
+    <ClCompile Include="cc\copy.c">
+      <Filter>cc</Filter>
+    </ClCompile>
+    <ClCompile Include="cc\fs.c">
+      <Filter>cc</Filter>
+    </ClCompile>
+    <ClCompile Include="cc\mdl.c">
+      <Filter>cc</Filter>
+    </ClCompile>
+    <ClCompile Include="cc\pin.c">
+      <Filter>cc</Filter>
+    </ClCompile>
+    <ClCompile Include="cc\view.c">
+      <Filter>cc</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\atom.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\callback.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\dbgctrl.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\efi.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\event.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\evtpair.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\exintrin.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\fmutex.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\handle.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\harderr.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\hdlsterm.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\init.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\interlocked.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\keyedevt.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\locale.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\lookas.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\mutant.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\profile.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\pushlock.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\resource.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\rundown.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\sem.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\shutdown.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\sysinfo.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\time.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\timer.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\uuid.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\win32k.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\work.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\xipdisp.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\zone.c">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\i386\fastinterlck_asm.c">
+      <Filter>ex\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\i386\ioport.c">
+      <Filter>ex\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="fsrtl\dbcsname.c">
+      <Filter>fsrtl</Filter>
+    </ClCompile>
+    <ClCompile Include="fsrtl\fastio.c">
+      <Filter>fsrtl</Filter>
+    </ClCompile>
+    <ClCompile Include="fsrtl\faulttol.c">
+      <Filter>fsrtl</Filter>
+    </ClCompile>
+    <ClCompile Include="fsrtl\filelock.c">
+      <Filter>fsrtl</Filter>
+    </ClCompile>
+    <ClCompile Include="fsrtl\filter.c">
+      <Filter>fsrtl</Filter>
+    </ClCompile>
+    <ClCompile Include="fsrtl\filtrctx.c">
+      <Filter>fsrtl</Filter>
+    </ClCompile>
+    <ClCompile Include="fsrtl\fsfilter.c">
+      <Filter>fsrtl</Filter>
+    </ClCompile>
+    <ClCompile Include="fsrtl\fsrtlpc.c">
+      <Filter>fsrtl</Filter>
+    </ClCompile>
+    <ClCompile Include="fsrtl\largemcb.c">
+      <Filter>fsrtl</Filter>
+    </ClCompile>
+    <ClCompile Include="fsrtl\mcb.c">
+      <Filter>fsrtl</Filter>
+    </ClCompile>
+    <ClCompile Include="fsrtl\name.c">
+      <Filter>fsrtl</Filter>
+    </ClCompile>
+    <ClCompile Include="fsrtl\notify.c">
+      <Filter>fsrtl</Filter>
+    </ClCompile>
+    <ClCompile Include="fsrtl\oplock.c">
+      <Filter>fsrtl</Filter>
+    </ClCompile>
+    <ClCompile Include="fsrtl\pnp.c">
+      <Filter>fsrtl</Filter>
+    </ClCompile>
+    <ClCompile Include="fsrtl\stackovf.c">
+      <Filter>fsrtl</Filter>
+    </ClCompile>
+    <ClCompile Include="fsrtl\tunnel.c">
+      <Filter>fsrtl</Filter>
+    </ClCompile>
+    <ClCompile Include="fsrtl\unc.c">
+      <Filter>fsrtl</Filter>
+    </ClCompile>
+    <ClCompile Include="fstub\disksup.c">
+      <Filter>fstub</Filter>
+    </ClCompile>
+    <ClCompile Include="fstub\fstubex.c">
+      <Filter>fstub</Filter>
+    </ClCompile>
+    <ClCompile Include="fstub\halstub.c">
+      <Filter>fstub</Filter>
+    </ClCompile>
+    <ClCompile Include="fstub\translate.c">
+      <Filter>fstub</Filter>
+    </ClCompile>
+    <ClCompile Include="inbv\inbv.c">
+      <Filter>inbv</Filter>
+    </ClCompile>
+    <ClCompile Include="inbv\inbvport.c">
+      <Filter>inbv</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\apc.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\balmgr.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\bug.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\clock.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\config.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\devqueue.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\dpc.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\eventobj.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\except.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\freeze.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\gate.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\gmutex.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\ipi.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\krnlinit.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\mutex.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\procobj.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\profobj.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\queue.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\semphobj.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\spinlock.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\thrdobj.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\thrdschd.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\time_2.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\timerobj.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\wait.c">
+      <Filter>ke</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\i386\abios.c">
+      <Filter>ke\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\i386\context.c">
+      <Filter>ke\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\i386\cpu.c">
+      <Filter>ke\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\i386\ctxswitch.c">
+      <Filter>ke\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\i386\exp.c">
+      <Filter>ke\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\i386\irqobj.c">
+      <Filter>ke\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\i386\kiinit.c">
+      <Filter>ke\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\i386\ldt.c">
+      <Filter>ke\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\i386\mtrr.c">
+      <Filter>ke\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\i386\patpge.c">
+      <Filter>ke\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\i386\thrdini.c">
+      <Filter>ke\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\i386\trap.c">
+      <Filter>ke\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\i386\traphdlr.c">
+      <Filter>ke\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\i386\usercall.c">
+      <Filter>ke\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\i386\usercall_asm.c">
+      <Filter>ke\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="ke\i386\v86vdm.c">
+      <Filter>ke\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="lpc\close.c">
+      <Filter>lpc</Filter>
+    </ClCompile>
+    <ClCompile Include="lpc\complete.c">
+      <Filter>lpc</Filter>
+    </ClCompile>
+    <ClCompile Include="lpc\connect.c">
+      <Filter>lpc</Filter>
+    </ClCompile>
+    <ClCompile Include="lpc\create.c">
+      <Filter>lpc</Filter>
+    </ClCompile>
+    <ClCompile Include="lpc\listen.c">
+      <Filter>lpc</Filter>
+    </ClCompile>
+    <ClCompile Include="lpc\port.c">
+      <Filter>lpc</Filter>
+    </ClCompile>
+    <ClCompile Include="lpc\reply.c">
+      <Filter>lpc</Filter>
+    </ClCompile>
+    <ClCompile Include="lpc\send.c">
+      <Filter>lpc</Filter>
+    </ClCompile>
+    <ClCompile Include="po\events.c">
+      <Filter>po</Filter>
+    </ClCompile>
+    <ClCompile Include="po\guid.c">
+      <Filter>po</Filter>
+    </ClCompile>
+    <ClCompile Include="po\poshtdwn.c">
+      <Filter>po</Filter>
+    </ClCompile>
+    <ClCompile Include="po\povolume.c">
+      <Filter>po</Filter>
+    </ClCompile>
+    <ClCompile Include="po\power.c">
+      <Filter>po</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\libsupp.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\misc.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\stack.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="se\access.c">
+      <Filter>se</Filter>
+    </ClCompile>
+    <ClCompile Include="se\acl.c">
+      <Filter>se</Filter>
+    </ClCompile>
+    <ClCompile Include="se\audit.c">
+      <Filter>se</Filter>
+    </ClCompile>
+    <ClCompile Include="se\lsa.c">
+      <Filter>se</Filter>
+    </ClCompile>
+    <ClCompile Include="se\priv.c">
+      <Filter>se</Filter>
+    </ClCompile>
+    <ClCompile Include="se\sd.c">
+      <Filter>se</Filter>
+    </ClCompile>
+    <ClCompile Include="se\semgr.c">
+      <Filter>se</Filter>
+    </ClCompile>
+    <ClCompile Include="se\sid.c">
+      <Filter>se</Filter>
+    </ClCompile>
+    <ClCompile Include="se\token.c">
+      <Filter>se</Filter>
+    </ClCompile>
+    <ClCompile Include="vdm\vdmexec.c">
+      <Filter>vdm</Filter>
+    </ClCompile>
+    <ClCompile Include="vdm\vdmmain.c">
+      <Filter>vdm</Filter>
+    </ClCompile>
+    <ClCompile Include="vf\driver_vf.c">
+      <Filter>vf</Filter>
+    </ClCompile>
+    <ClCompile Include="wmi\wmi.c">
+      <Filter>wmi</Filter>
+    </ClCompile>
+    <ClCompile Include="dbgk\dbgkobj.c">
+      <Filter>dbgk</Filter>
+    </ClCompile>
+    <ClCompile Include="dbgk\dbgkutil.c">
+      <Filter>dbgk</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\balance.c">
+      <Filter>mm</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\freelist.c">
+      <Filter>mm</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\marea.c">
+      <Filter>mm</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\mmfault.c">
+      <Filter>mm</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\mminit.c">
+      <Filter>mm</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\pagefile.c">
+      <Filter>mm</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\region.c">
+      <Filter>mm</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\rmap.c">
+      <Filter>mm</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\section.c">
+      <Filter>mm</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\i386\page.c">
+      <Filter>mm\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\ARM3\contmem.c">
+      <Filter>mm\ARM3</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\ARM3\drvmgmt.c">
+      <Filter>mm\ARM3</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\ARM3\dynamic.c">
+      <Filter>mm\ARM3</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\ARM3\expool.c">
+      <Filter>mm\ARM3</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\ARM3\hypermap.c">
+      <Filter>mm\ARM3</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\ARM3\iosup.c">
+      <Filter>mm\ARM3</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\ARM3\largepag.c">
+      <Filter>mm\ARM3</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\ARM3\mdlsup.c">
+      <Filter>mm\ARM3</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\ARM3\mminit_ARM3.c">
+      <Filter>mm\ARM3</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\ARM3\mmsup.c">
+      <Filter>mm\ARM3</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\ARM3\ncache.c">
+      <Filter>mm\ARM3</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\ARM3\pagfault.c">
+      <Filter>mm\ARM3</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\ARM3\pfnlist.c">
+      <Filter>mm\ARM3</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\ARM3\pool.c">
+      <Filter>mm\ARM3</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\ARM3\procsup.c">
+      <Filter>mm\ARM3</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\ARM3\section_ARM3.c">
+      <Filter>mm\ARM3</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\ARM3\special.c">
+      <Filter>mm\ARM3</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\ARM3\sysldr.c">
+      <Filter>mm\ARM3</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\ARM3\syspte.c">
+      <Filter>mm\ARM3</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\ARM3\vadnode.c">
+      <Filter>mm\ARM3</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\ARM3\virtual.c">
+      <Filter>mm\ARM3</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\ARM3\zeropage.c">
+      <Filter>mm\ARM3</Filter>
+    </ClCompile>
+    <ClCompile Include="mm\ARM3\i386\init_ARM3.c">
+      <Filter>mm\ARM3\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="ob\obdir.c">
+      <Filter>ob</Filter>
+    </ClCompile>
+    <ClCompile Include="ob\obhandle.c">
+      <Filter>ob</Filter>
+    </ClCompile>
+    <ClCompile Include="ob\obinit.c">
+      <Filter>ob</Filter>
+    </ClCompile>
+    <ClCompile Include="ob\oblife.c">
+      <Filter>ob</Filter>
+    </ClCompile>
+    <ClCompile Include="ob\oblink.c">
+      <Filter>ob</Filter>
+    </ClCompile>
+    <ClCompile Include="ob\obname.c">
+      <Filter>ob</Filter>
+    </ClCompile>
+    <ClCompile Include="ob\obref.c">
+      <Filter>ob</Filter>
+    </ClCompile>
+    <ClCompile Include="ob\obsdcach.c">
+      <Filter>ob</Filter>
+    </ClCompile>
+    <ClCompile Include="ob\obsecure.c">
+      <Filter>ob</Filter>
+    </ClCompile>
+    <ClCompile Include="ob\obwait.c">
+      <Filter>ob</Filter>
+    </ClCompile>
+    <ClCompile Include="ps\debug.c">
+      <Filter>ps</Filter>
+    </ClCompile>
+    <ClCompile Include="ps\job.c">
+      <Filter>ps</Filter>
+    </ClCompile>
+    <ClCompile Include="ps\kill.c">
+      <Filter>ps</Filter>
+    </ClCompile>
+    <ClCompile Include="ps\process.c">
+      <Filter>ps</Filter>
+    </ClCompile>
+    <ClCompile Include="ps\psmgr.c">
+      <Filter>ps</Filter>
+    </ClCompile>
+    <ClCompile Include="ps\psnotify.c">
+      <Filter>ps</Filter>
+    </ClCompile>
+    <ClCompile Include="ps\query.c">
+      <Filter>ps</Filter>
+    </ClCompile>
+    <ClCompile Include="ps\quota.c">
+      <Filter>ps</Filter>
+    </ClCompile>
+    <ClCompile Include="ps\security.c">
+      <Filter>ps</Filter>
+    </ClCompile>
+    <ClCompile Include="ps\state.c">
+      <Filter>ps</Filter>
+    </ClCompile>
+    <ClCompile Include="ps\thread.c">
+      <Filter>ps</Filter>
+    </ClCompile>
+    <ClCompile Include="ps\win32.c">
+      <Filter>ps</Filter>
+    </ClCompile>
+    <ClCompile Include="ps\i386\psctx.c">
+      <Filter>ps\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="ps\i386\psldt.c">
+      <Filter>ps\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmalloc.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmapi.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmboot.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmcheck.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmconfig.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmcontrl.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmdata.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmdelay.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmhook.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmhvlist.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmindex.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cminit.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmkcbncb.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmkeydel.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmlazy.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmmapvw.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmname.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmnotify.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmparse.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmquota.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmse.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmsecach.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmsysini.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmvalche.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmvalue.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmwraprs.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\ntapi.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmlib\cminit_2.c">
+      <Filter>config\cmlib</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmlib\hivebin.c">
+      <Filter>config\cmlib</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmlib\hivecell.c">
+      <Filter>config\cmlib</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmlib\hiveinit.c">
+      <Filter>config\cmlib</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmlib\hivesum.c">
+      <Filter>config\cmlib</Filter>
+    </ClCompile>
+    <ClCompile Include="config\cmlib\hivewrt.c">
+      <Filter>config\cmlib</Filter>
+    </ClCompile>
+    <ClCompile Include="config\i386\cmhardwr.c">
+      <Filter>config\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\adapter.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\arcname.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\bootlog.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\controller.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\device.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\deviface.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\driver.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\error.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\file.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\iocomp.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\ioevent.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\iofunc.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\iomdl.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\iomgr.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\iorsrce.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\iotimer.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\iowork.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\irp.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\irq.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\ramdisk.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\rawfs.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\remlock.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\symlink.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\util.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\iomgr\volume.c">
+      <Filter>io\iomgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\pnpmgr\plugplay.c">
+      <Filter>io\pnpmgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\pnpmgr\pnpdma.c">
+      <Filter>io\pnpmgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\pnpmgr\pnpinit.c">
+      <Filter>io\pnpmgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\pnpmgr\pnpmgr.c">
+      <Filter>io\pnpmgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\pnpmgr\pnpnotify.c">
+      <Filter>io\pnpmgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\pnpmgr\pnpreport.c">
+      <Filter>io\pnpmgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\pnpmgr\pnpres.c">
+      <Filter>io\pnpmgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\pnpmgr\pnproot.c">
+      <Filter>io\pnpmgr</Filter>
+    </ClCompile>
+    <ClCompile Include="io\pnpmgr\pnputil.c">
+      <Filter>io\pnpmgr</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ntoskrnl.def">
+      <Filter>源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cache\newcc.h">
+      <Filter>cache</Filter>
+    </ClInclude>
+    <ClInclude Include="cache\section\newmm.h">
+      <Filter>cache\section</Filter>
+    </ClInclude>
+    <ClInclude Include="mm\ARM3\miarm.h">
+      <Filter>mm\ARM3</Filter>
+    </ClInclude>
+    <ClInclude Include="mm\ARM3\miavl.h">
+      <Filter>mm\ARM3</Filter>
+    </ClInclude>
+    <ClInclude Include="config\cmlib\cmdata.h">
+      <Filter>config\cmlib</Filter>
+    </ClInclude>
+    <ClInclude Include="config\cmlib\cmlib.h">
+      <Filter>config\cmlib</Filter>
+    </ClInclude>
+    <ClInclude Include="config\cmlib\hivedata.h">
+      <Filter>config\cmlib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="inbv\logo\1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="inbv\logo\14.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="inbv\logo\15.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="inbv\logo\2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="inbv\logo\3.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="inbv\logo\4.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="inbv\logo\5.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="inbv\logo\6.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="inbv\logo\7.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="inbv\logo\8.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ntoskrnl.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

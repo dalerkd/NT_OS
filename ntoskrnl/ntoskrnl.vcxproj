@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9FD94E19-9F8F-42BD-AD65-E31F353E40F4}</ProjectGuid>
+    <RootNamespace>ntoskrnl</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\ReactOS-0.3.15-REL-src\ntoskrnl\include;..\ReactOS-0.3.15-REL-src\include;..\ReactOS-0.3.15-REL-src\include\psdk;..\ReactOS-0.3.15-REL-src\include\ddk;..\ReactOS-0.3.15-REL-src\include\crt;..\ReactOS-0.3.15-REL-src\include\crt\msc;..\ReactOS-0.3.15-REL-src\include\reactos;..\ReactOS-0.3.15-REL-src\include\ndk;..\ReactOS-0.3.15-REL-src\include\host;..\ReactOS-0.3.15-REL-src\include\reactos\libs;..\ReactOS-0.3.15-REL-src\lib\cmlib;..\ReactOS-0.3.15-REL-src\lib\rtl;..\ReactOS-0.3.15-REL-src\include\ndk\i386;..\ReactOS-0.3.15-REL-src\modules\rosapps\applications\sysutils\utils\pice\module;..\ReactOS-0.3.15-REL-src\ntoskrnl\include\internal;..\ReactOS-0.3.15-REL-src\ntoskrnl\mm;..\ReactOS-0.3.15-REL-src\ntoskrnl;..\ReactOS-0.3.15-REL-src\include\reactos\drivers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WIN32_WINNT=0x0502;_X86_;_NTOSKRNL_;_NTSYSTEM_;_WINKD_;CRITICAL_SERVICE_FAILED=1;INVALID_CANCEL_OF_FILE_OPEN=0x000000E8;INITGUID;CONFIG_SMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling />
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <Link>
+      <AdditionalOptions>/SECTION:INIT,D /IGNORE:4078,4217,4049,4239,4075,4273 /safeseh:no %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kd.lib;rtl.lib;hal.lib;bootvid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\Debug;..\system32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>ntoskrnl.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Native</SubSystem>
+      <EntryPointSymbol>KiSystemStartup</EntryPointSymbol>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>if exist  $(OutDir)$(ProjectName).exp del $(OutDir)$(ProjectName).exp
+del *.user</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <ModuleDefinitionFile>ntoskrnl.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ntoskrnl.c" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="cache\section\data.c" />
+    <ClCompile Include="cache\section\fault.c" />
+    <ClCompile Include="cache\section\io.c" />
+    <ClCompile Include="cache\section\reqtools.c" />
+    <ClCompile Include="cache\section\sptab.c" />
+    <ClCompile Include="cache\section\swapout.c" />
+    <ClCompile Include="cc\cacheman.c" />
+    <ClCompile Include="cc\copy.c" />
+    <ClCompile Include="cc\fs.c" />
+    <ClCompile Include="cc\mdl.c" />
+    <ClCompile Include="cc\pin.c" />
+    <ClCompile Include="cc\view.c" />
+    <ClCompile Include="ex\atom.c" />
+    <ClCompile Include="ex\callback.c" />
+    <ClCompile Include="ex\dbgctrl.c" />
+    <ClCompile Include="ex\efi.c" />
+    <ClCompile Include="ex\event.c" />
+    <ClCompile Include="ex\evtpair.c" />
+    <ClCompile Include="ex\exintrin.c" />
+    <ClCompile Include="ex\fmutex.c" />
+    <ClCompile Include="ex\handle.c" />
+    <ClCompile Include="ex\harderr.c" />
+    <ClCompile Include="ex\hdlsterm.c" />
+    <ClCompile Include="ex\init.c" />
+    <ClCompile Include="ex\interlocked.c" />
+    <ClCompile Include="ex\keyedevt.c" />
+    <ClCompile Include="ex\locale.c" />
+    <ClCompile Include="ex\lookas.c" />
+    <ClCompile Include="ex\mutant.c" />
+    <ClCompile Include="ex\profile.c" />
+    <ClCompile Include="ex\pushlock.c" />
+    <ClCompile Include="ex\resource.c" />
+    <ClCompile Include="ex\rundown.c" />
+    <ClCompile Include="ex\sem.c" />
+    <ClCompile Include="ex\shutdown.c" />
+    <ClCompile Include="ex\sysinfo.c" />
+    <ClCompile Include="ex\time.c" />
+    <ClCompile Include="ex\timer.c" />
+    <ClCompile Include="ex\uuid.c" />
+    <ClCompile Include="ex\win32k.c" />
+    <ClCompile Include="ex\work.c" />
+    <ClCompile Include="ex\xipdisp.c" />
+    <ClCompile Include="ex\zone.c" />
+    <ClCompile Include="ex\i386\fastinterlck_asm.c" />
+    <ClCompile Include="ex\i386\ioport.c" />
+    <ClCompile Include="fsrtl\dbcsname.c" />
+    <ClCompile Include="fsrtl\fastio.c" />
+    <ClCompile Include="fsrtl\faulttol.c" />
+    <ClCompile Include="fsrtl\filelock.c" />
+    <ClCompile Include="fsrtl\filter.c" />
+    <ClCompile Include="fsrtl\filtrctx.c" />
+    <ClCompile Include="fsrtl\fsfilter.c" />
+    <ClCompile Include="fsrtl\fsrtlpc.c" />
+    <ClCompile Include="fsrtl\largemcb.c" />
+    <ClCompile Include="fsrtl\mcb.c" />
+    <ClCompile Include="fsrtl\name.c" />
+    <ClCompile Include="fsrtl\notify.c" />
+    <ClCompile Include="fsrtl\oplock.c" />
+    <ClCompile Include="fsrtl\pnp.c" />
+    <ClCompile Include="fsrtl\stackovf.c" />
+    <ClCompile Include="fsrtl\tunnel.c" />
+    <ClCompile Include="fsrtl\unc.c" />
+    <ClCompile Include="fstub\disksup.c" />
+    <ClCompile Include="fstub\fstubex.c" />
+    <ClCompile Include="fstub\halstub.c" />
+    <ClCompile Include="fstub\translate.c" />
+    <ClCompile Include="inbv\inbv.c" />
+    <ClCompile Include="inbv\inbvport.c" />
+    <ClCompile Include="ke\apc.c" />
+    <ClCompile Include="ke\balmgr.c" />
+    <ClCompile Include="ke\bug.c" />
+    <ClCompile Include="ke\clock.c" />
+    <ClCompile Include="ke\config.c" />
+    <ClCompile Include="ke\devqueue.c" />
+    <ClCompile Include="ke\dpc.c" />
+    <ClCompile Include="ke\eventobj.c" />
+    <ClCompile Include="ke\except.c" />
+    <ClCompile Include="ke\freeze.c" />
+    <ClCompile Include="ke\gate.c" />
+    <ClCompile Include="ke\gmutex.c" />
+    <ClCompile Include="ke\ipi.c" />
+    <ClCompile Include="ke\krnlinit.c" />
+    <ClCompile Include="ke\mutex.c" />
+    <ClCompile Include="ke\procobj.c" />
+    <ClCompile Include="ke\profobj.c" />
+    <ClCompile Include="ke\queue.c" />
+    <ClCompile Include="ke\semphobj.c" />
+    <ClCompile Include="ke\spinlock.c" />
+    <ClCompile Include="ke\thrdobj.c" />
+    <ClCompile Include="ke\thrdschd.c" />
+    <ClCompile Include="ke\time_2.c" />
+    <ClCompile Include="ke\timerobj.c" />
+    <ClCompile Include="ke\wait.c" />
+    <ClCompile Include="ke\i386\abios.c" />
+    <ClCompile Include="ke\i386\context.c" />
+    <ClCompile Include="ke\i386\cpu.c" />
+    <ClCompile Include="ke\i386\ctxswitch.c" />
+    <ClCompile Include="ke\i386\exp.c" />
+    <ClCompile Include="ke\i386\irqobj.c" />
+    <ClCompile Include="ke\i386\kiinit.c" />
+    <ClCompile Include="ke\i386\ldt.c" />
+    <ClCompile Include="ke\i386\mtrr.c" />
+    <ClCompile Include="ke\i386\patpge.c" />
+    <ClCompile Include="ke\i386\thrdini.c" />
+    <ClCompile Include="ke\i386\trap.c" />
+    <ClCompile Include="ke\i386\traphdlr.c" />
+    <ClCompile Include="ke\i386\usercall.c" />
+    <ClCompile Include="ke\i386\usercall_asm.c" />
+    <ClCompile Include="ke\i386\v86vdm.c" />
+    <ClCompile Include="lpc\close.c" />
+    <ClCompile Include="lpc\complete.c" />
+    <ClCompile Include="lpc\connect.c" />
+    <ClCompile Include="lpc\create.c" />
+    <ClCompile Include="lpc\listen.c" />
+    <ClCompile Include="lpc\port.c" />
+    <ClCompile Include="lpc\reply.c" />
+    <ClCompile Include="lpc\send.c" />
+    <ClCompile Include="po\events.c" />
+    <ClCompile Include="po\guid.c" />
+    <ClCompile Include="po\poshtdwn.c" />
+    <ClCompile Include="po\povolume.c" />
+    <ClCompile Include="po\power.c" />
+    <ClCompile Include="rtl\libsupp.c" />
+    <ClCompile Include="rtl\misc.c" />
+    <ClCompile Include="rtl\i386\stack.c" />
+    <ClCompile Include="se\access.c" />
+    <ClCompile Include="se\acl.c" />
+    <ClCompile Include="se\audit.c" />
+    <ClCompile Include="se\lsa.c" />
+    <ClCompile Include="se\priv.c" />
+    <ClCompile Include="se\sd.c" />
+    <ClCompile Include="se\semgr.c" />
+    <ClCompile Include="se\sid.c" />
+    <ClCompile Include="se\token.c" />
+    <ClCompile Include="vdm\vdmexec.c" />
+    <ClCompile Include="vdm\vdmmain.c" />
+    <ClCompile Include="vf\driver_vf.c" />
+    <ClCompile Include="wmi\wmi.c" />
+    <ClCompile Include="dbgk\dbgkobj.c" />
+    <ClCompile Include="dbgk\dbgkutil.c" />
+    <ClCompile Include="mm\balance.c" />
+    <ClCompile Include="mm\freelist.c" />
+    <ClCompile Include="mm\marea.c" />
+    <ClCompile Include="mm\mmfault.c" />
+    <ClCompile Include="mm\mminit.c" />
+    <ClCompile Include="mm\pagefile.c" />
+    <ClCompile Include="mm\region.c" />
+    <ClCompile Include="mm\rmap.c" />
+    <ClCompile Include="mm\section.c" />
+    <ClCompile Include="mm\i386\page.c" />
+    <ClCompile Include="mm\ARM3\contmem.c" />
+    <ClCompile Include="mm\ARM3\drvmgmt.c" />
+    <ClCompile Include="mm\ARM3\dynamic.c" />
+    <ClCompile Include="mm\ARM3\expool.c" />
+    <ClCompile Include="mm\ARM3\hypermap.c" />
+    <ClCompile Include="mm\ARM3\iosup.c" />
+    <ClCompile Include="mm\ARM3\largepag.c" />
+    <ClCompile Include="mm\ARM3\mdlsup.c" />
+    <ClCompile Include="mm\ARM3\mminit_ARM3.c" />
+    <ClCompile Include="mm\ARM3\mmsup.c" />
+    <ClCompile Include="mm\ARM3\ncache.c" />
+    <ClCompile Include="mm\ARM3\pagfault.c" />
+    <ClCompile Include="mm\ARM3\pfnlist.c" />
+    <ClCompile Include="mm\ARM3\pool.c" />
+    <ClCompile Include="mm\ARM3\procsup.c" />
+    <ClCompile Include="mm\ARM3\section_ARM3.c" />
+    <ClCompile Include="mm\ARM3\special.c" />
+    <ClCompile Include="mm\ARM3\sysldr.c" />
+    <ClCompile Include="mm\ARM3\syspte.c" />
+    <ClCompile Include="mm\ARM3\vadnode.c" />
+    <ClCompile Include="mm\ARM3\virtual.c" />
+    <ClCompile Include="mm\ARM3\zeropage.c" />
+    <ClCompile Include="mm\ARM3\i386\init_ARM3.c" />
+    <ClCompile Include="ob\obdir.c" />
+    <ClCompile Include="ob\obhandle.c" />
+    <ClCompile Include="ob\obinit.c" />
+    <ClCompile Include="ob\oblife.c" />
+    <ClCompile Include="ob\oblink.c" />
+    <ClCompile Include="ob\obname.c" />
+    <ClCompile Include="ob\obref.c" />
+    <ClCompile Include="ob\obsdcach.c" />
+    <ClCompile Include="ob\obsecure.c" />
+    <ClCompile Include="ob\obwait.c" />
+    <ClCompile Include="ps\debug.c" />
+    <ClCompile Include="ps\job.c" />
+    <ClCompile Include="ps\kill.c" />
+    <ClCompile Include="ps\process.c" />
+    <ClCompile Include="ps\psmgr.c" />
+    <ClCompile Include="ps\psnotify.c" />
+    <ClCompile Include="ps\query.c" />
+    <ClCompile Include="ps\quota.c" />
+    <ClCompile Include="ps\security.c" />
+    <ClCompile Include="ps\state.c" />
+    <ClCompile Include="ps\thread.c" />
+    <ClCompile Include="ps\win32.c" />
+    <ClCompile Include="ps\i386\psctx.c" />
+    <ClCompile Include="ps\i386\psldt.c" />
+    <ClCompile Include="config\cmalloc.c" />
+    <ClCompile Include="config\cmapi.c" />
+    <ClCompile Include="config\cmboot.c" />
+    <ClCompile Include="config\cmcheck.c" />
+    <ClCompile Include="config\cmconfig.c" />
+    <ClCompile Include="config\cmcontrl.c" />
+    <ClCompile Include="config\cmdata.c" />
+    <ClCompile Include="config\cmdelay.c" />
+    <ClCompile Include="config\cmhook.c" />
+    <ClCompile Include="config\cmhvlist.c" />
+    <ClCompile Include="config\cmindex.c" />
+    <ClCompile Include="config\cminit.c" />
+    <ClCompile Include="config\cmkcbncb.c" />
+    <ClCompile Include="config\cmkeydel.c" />
+    <ClCompile Include="config\cmlazy.c" />
+    <ClCompile Include="config\cmmapvw.c" />
+    <ClCompile Include="config\cmname.c" />
+    <ClCompile Include="config\cmnotify.c" />
+    <ClCompile Include="config\cmparse.c" />
+    <ClCompile Include="config\cmquota.c" />
+    <ClCompile Include="config\cmse.c" />
+    <ClCompile Include="config\cmsecach.c" />
+    <ClCompile Include="config\cmsysini.c" />
+    <ClCompile Include="config\cmvalche.c" />
+    <ClCompile Include="config\cmvalue.c" />
+    <ClCompile Include="config\cmwraprs.c" />
+    <ClCompile Include="config\ntapi.c" />
+    <ClCompile Include="config\cmlib\cminit_2.c" />
+    <ClCompile Include="config\cmlib\hivebin.c" />
+    <ClCompile Include="config\cmlib\hivecell.c" />
+    <ClCompile Include="config\cmlib\hiveinit.c" />
+    <ClCompile Include="config\cmlib\hivesum.c" />
+    <ClCompile Include="config\cmlib\hivewrt.c" />
+    <ClCompile Include="config\i386\cmhardwr.c" />
+    <ClCompile Include="io\iomgr\adapter.c" />
+    <ClCompile Include="io\iomgr\arcname.c" />
+    <ClCompile Include="io\iomgr\bootlog.c" />
+    <ClCompile Include="io\iomgr\controller.c" />
+    <ClCompile Include="io\iomgr\device.c" />
+    <ClCompile Include="io\iomgr\deviface.c" />
+    <ClCompile Include="io\iomgr\driver.c" />
+    <ClCompile Include="io\iomgr\error.c" />
+    <ClCompile Include="io\iomgr\file.c" />
+    <ClCompile Include="io\iomgr\iocomp.c" />
+    <ClCompile Include="io\iomgr\ioevent.c" />
+    <ClCompile Include="io\iomgr\iofunc.c" />
+    <ClCompile Include="io\iomgr\iomdl.c" />
+    <ClCompile Include="io\iomgr\iomgr.c" />
+    <ClCompile Include="io\iomgr\iorsrce.c" />
+    <ClCompile Include="io\iomgr\iotimer.c" />
+    <ClCompile Include="io\iomgr\iowork.c" />
+    <ClCompile Include="io\iomgr\irp.c" />
+    <ClCompile Include="io\iomgr\irq.c" />
+    <ClCompile Include="io\iomgr\ramdisk.c" />
+    <ClCompile Include="io\iomgr\rawfs.c" />
+    <ClCompile Include="io\iomgr\remlock.c" />
+    <ClCompile Include="io\iomgr\symlink.c" />
+    <ClCompile Include="io\iomgr\util.c" />
+    <ClCompile Include="io\iomgr\volume.c" />
+    <ClCompile Include="io\pnpmgr\plugplay.c" />
+    <ClCompile Include="io\pnpmgr\pnpdma.c" />
+    <ClCompile Include="io\pnpmgr\pnpinit.c" />
+    <ClCompile Include="io\pnpmgr\pnpmgr.c" />
+    <ClCompile Include="io\pnpmgr\pnpnotify.c" />
+    <ClCompile Include="io\pnpmgr\pnpreport.c" />
+    <ClCompile Include="io\pnpmgr\pnpres.c" />
+    <ClCompile Include="io\pnpmgr\pnproot.c" />
+    <ClCompile Include="io\pnpmgr\pnputil.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ntoskrnl.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="cache\newcc.h" />
+    <ClInclude Include="cache\section\newmm.h" />
+    <ClInclude Include="mm\ARM3\miarm.h" />
+    <ClInclude Include="mm\ARM3\miavl.h" />
+    <ClInclude Include="config\cmlib\cmdata.h" />
+    <ClInclude Include="config\cmlib\cmlib.h" />
+    <ClInclude Include="config\cmlib\hivedata.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="inbv\logo\1.bmp" />
+    <Image Include="inbv\logo\14.bmp" />
+    <Image Include="inbv\logo\15.bmp" />
+    <Image Include="inbv\logo\2.bmp" />
+    <Image Include="inbv\logo\3.bmp" />
+    <Image Include="inbv\logo\4.bmp" />
+    <Image Include="inbv\logo\5.bmp" />
+    <Image Include="inbv\logo\6.bmp" />
+    <Image Include="inbv\logo\7.bmp" />
+    <Image Include="inbv\logo\8.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ntoskrnl.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\kd\kd.vcxproj">
+      <Project>{c504aa77-0c73-432a-b59f-81bbaafdcbd7}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\rtl\rtl.vcxproj">
+      <Project>{129f5bbb-88c6-4e25-9bc8-23965c956283}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

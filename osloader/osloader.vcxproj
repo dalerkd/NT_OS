@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4D694286-08E3-4ED8-83D7-1B63D3A34540}</ProjectGuid>
+    <RootNamespace>osloader</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>true</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\ReactOS-0.3.15-REL-src\ntoskrnl\include;..\ReactOS-0.3.15-REL-src\include;..\ReactOS-0.3.15-REL-src\include\psdk;..\ReactOS-0.3.15-REL-src\include\ddk;..\ReactOS-0.3.15-REL-src\include\crt;..\ReactOS-0.3.15-REL-src\include\crt\msc;..\ReactOS-0.3.15-REL-src\include\reactos;..\ReactOS-0.3.15-REL-src\include\ndk;..\ReactOS-0.3.15-REL-src\include\host;..\ReactOS-0.3.15-REL-src\include\reactos\libs;..\ReactOS-0.3.15-REL-src\lib\cmlib;..\ReactOS-0.3.15-REL-src\lib\rtl;..\ReactOS-0.3.15-REL-src\include\ndk\i386;..\ReactOS-0.3.15-REL-src\modules\rosapps\applications\sysutils\utils\pice\module;..\ReactOS-0.3.15-REL-src\ntoskrnl\include\internal;..\ReactOS-0.3.15-REL-src\include\reactos\arc;..\ReactOS-0.3.15-REL-src\boot\freeldr\freeldr\include;..\ReactOS-0.3.15-REL-src\ntoskrnl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINKD_;SIMULATE_DEBUG2;_WIN32_WINNT=0x0502;_X86_;__i386__;_NTOSKRNL_;_NTSYSTEM_;__REACTOS__;WARN=;TRACE=;ERR=;BugCheck=;NTHALAPI=;TRACE_CH=;REACTOS;READ_SECTOR=16;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
+      <StringPooling>false</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling />
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4049;4217;4047;4024;4018;4005;4013;4273;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <UseFullPaths>false</UseFullPaths>
+      <OmitDefaultLibName>false</OmitDefaultLibName>
+      <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <Link>
+      <AdditionalOptions>/SECTION:INIT,D /IGNORE:4078,4217,4049,4239,4075,4273 /safeseh:no %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>rtl.lib;kd.lib;kernel32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Version />
+      <AdditionalLibraryDirectories>..\Debug;..\system32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Native</SubSystem>
+      <OptimizeReferences />
+      <EnableCOMDATFolding />
+      <EntryPointSymbol>NtProcessStartup</EntryPointSymbol>
+      <NoEntryPoint>false</NoEntryPoint>
+      <SetChecksum>false</SetChecksum>
+      <BaseAddress>0x00400000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <FixedBaseAddress />
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <MergeSections />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>if exist  $(OutDir)$(ProjectName).ilk del $(OutDir)$(ProjectName).ilk
+if exist  $(OutDir)$(ProjectName).exp del $(OutDir)$(ProjectName).exp
+del *.user
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="entry.c" />
+    <ClCompile Include="osloader.c" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="windows\arcname.c" />
+    <ClCompile Include="windows\binhive.c" />
+    <ClCompile Include="windows\bootmgr.c" />
+    <ClCompile Include="windows\conversion.c" />
+    <ClCompile Include="windows\disk.c" />
+    <ClCompile Include="windows\fs.c" />
+    <ClCompile Include="windows\heap.c" />
+    <ClCompile Include="windows\hwdisk.c" />
+    <ClCompile Include="windows\ldfs.c" />
+    <ClCompile Include="windows\meminit.c" />
+    <ClCompile Include="windows\mm.c" />
+    <ClCompile Include="windows\partition.c" />
+    <ClCompile Include="windows\pcmem.c" />
+    <ClCompile Include="windows\peloader.c" />
+    <ClCompile Include="windows\ramdisk.c" />
+    <ClCompile Include="windows\registry.c" />
+    <ClCompile Include="windows\winldr.c" />
+    <ClCompile Include="windows\winldr2.c" />
+    <ClCompile Include="windows\wlmemory.c" />
+    <ClCompile Include="windows\wlregistry.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="osloader.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="windows\ramdisk.h" />
+    <ClInclude Include="windows\registry.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

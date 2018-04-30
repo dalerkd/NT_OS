@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="rtl">
+      <UniqueIdentifier>{d49b7811-4290-4de5-94a9-7e00c49e4e7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rtl\i386">
+      <UniqueIdentifier>{c27f72b6-0b29-4d20-8eaa-54ff6abf7e4b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\access.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\acl.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\assert.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\atom.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\avltable.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\bitmap.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\bootdata.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\byteswap.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\compress.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\condvar.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\crc32.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\critical.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\dbgbuffer.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\debug.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\dos8dot3.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\encode.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\env.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\error.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\exception.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\generictable.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\handle.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\heap.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\heapdbg.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\heappage.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\heapuser.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\image.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\interlck.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\largeint.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\luid.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\mem.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\message.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\network.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\nls.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\path.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\ppb.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\priv.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\process.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\propvar.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\random.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\rangelist.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\registry.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\res.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\resource.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\sd.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\sid.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\slist.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\splaytree.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\srw.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\thread.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\time.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\timerqueue.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\timezone.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\unicode.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\unicodeprefix.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\vectoreh.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\version.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\wait.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\workitem.c">
+      <Filter>rtl</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\abs.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\alldiv_asm.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\alldvrm_asm.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\allmul_asm.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\allrem_asm.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\allshl_asm.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\allshr_asm.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\atoi.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\atoi64.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="aulldiv_asm.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\aulldvrm_asm.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\aullrem_asm.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\aullshr_asm.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\chkstk_asm.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\cos_asm.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\csq.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\except_2.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\fltused.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\islower.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\isprint.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\isxdigit.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\itoa.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\itoa2.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\itow.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\mbstowcs_nt.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\memchr.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\qsort.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\rand.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\seh_prolog.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\sin_asm.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\sprintf_2.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\sqrt_asm.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\string.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\strlwr.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\strncat.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\strrev.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\strset.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\strspn.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\strtoul.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\stubs.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\swprintf.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\thread_2.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\vsprintf.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\wcscspn.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\wcslwr.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\wcsncat.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\wcsrev.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\wcsset.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\wcsspn.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\wcstombs_nt.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="rtl\i386\wcsupr.c">
+      <Filter>rtl\i386</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="rtl\avlsupp.h">
+      <Filter>rtl</Filter>
+    </ClInclude>
+    <ClInclude Include="rtl\heap.h">
+      <Filter>rtl</Filter>
+    </ClInclude>
+    <ClInclude Include="rtl\rtl.h">
+      <Filter>rtl</Filter>
+    </ClInclude>
+    <ClInclude Include="rtl\rtlavl.h">
+      <Filter>rtl</Filter>
+    </ClInclude>
+    <ClInclude Include="rtl\rtlp.h">
+      <Filter>rtl</Filter>
+    </ClInclude>
+    <ClInclude Include="rtl\i386\vsprintf.h">
+      <Filter>rtl\i386</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="rtl\CMakeLists.txt">
+      <Filter>rtl</Filter>
+    </Text>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

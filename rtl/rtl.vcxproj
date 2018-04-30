@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{129F5BBB-88C6-4E25-9BC8-23965C956283}</ProjectGuid>
+    <RootNamespace>rtl</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\ReactOS-0.3.15-REL-src\ntoskrnl\include;..\ReactOS-0.3.15-REL-src\include;..\ReactOS-0.3.15-REL-src\include\psdk;..\ReactOS-0.3.15-REL-src\include\ddk;..\ReactOS-0.3.15-REL-src\include\crt;..\ReactOS-0.3.15-REL-src\include\crt\msc;..\ReactOS-0.3.15-REL-src\include\reactos;..\ReactOS-0.3.15-REL-src\include\ndk;..\ReactOS-0.3.15-REL-src\include\host;..\ReactOS-0.3.15-REL-src\include\reactos\libs;..\ReactOS-0.3.15-REL-src\lib\cmlib;..\ReactOS-0.3.15-REL-src\include\ndk\i386;..\ReactOS-0.3.15-REL-src\modules\rosapps\applications\sysutils\utils\pice\module;..\ReactOS-0.3.15-REL-src\include\reactos\arc;..\ReactOS-0.3.15-REL-src\lib\rtl;..\ReactOS-0.3.15-REL-src\include\reactos\drivers;rtl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_WIN32_WINNT=0x0502;_X86_;_NTOSKRNL_;_NTSYSTEM_;_WINKD_;CRITICAL_SERVICE_FAILED=1;INVALID_CANCEL_OF_FILE_OPEN=0x000000E8;ERROR_CALL_NOT_IMPLEMENTED=120;_NTDLLBUILD_;NO_RTL_INLINES;CRTDLL;_LIBCNT_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling />
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <OmitDefaultLibName>false</OmitDefaultLibName>
+      <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>if exist  $(OutDir)$(ProjectName).exp del $(OutDir)$(ProjectName).exp
+del *.user</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="rtl\access.c" />
+    <ClCompile Include="rtl\acl.c" />
+    <ClCompile Include="rtl\assert.c" />
+    <ClCompile Include="rtl\atom.c" />
+    <ClCompile Include="rtl\avltable.c" />
+    <ClCompile Include="rtl\bitmap.c" />
+    <ClCompile Include="rtl\bootdata.c" />
+    <ClCompile Include="rtl\byteswap.c" />
+    <ClCompile Include="rtl\compress.c" />
+    <ClCompile Include="rtl\condvar.c" />
+    <ClCompile Include="rtl\crc32.c" />
+    <ClCompile Include="rtl\critical.c" />
+    <ClCompile Include="rtl\dbgbuffer.c" />
+    <ClCompile Include="rtl\debug.c" />
+    <ClCompile Include="rtl\dos8dot3.c" />
+    <ClCompile Include="rtl\encode.c" />
+    <ClCompile Include="rtl\env.c" />
+    <ClCompile Include="rtl\error.c" />
+    <ClCompile Include="rtl\exception.c" />
+    <ClCompile Include="rtl\generictable.c" />
+    <ClCompile Include="rtl\handle.c" />
+    <ClCompile Include="rtl\heap.c" />
+    <ClCompile Include="rtl\heapdbg.c" />
+    <ClCompile Include="rtl\heappage.c" />
+    <ClCompile Include="rtl\heapuser.c" />
+    <ClCompile Include="rtl\image.c" />
+    <ClCompile Include="rtl\interlck.c" />
+    <ClCompile Include="rtl\largeint.c" />
+    <ClCompile Include="rtl\luid.c" />
+    <ClCompile Include="rtl\mem.c" />
+    <ClCompile Include="rtl\message.c" />
+    <ClCompile Include="rtl\network.c" />
+    <ClCompile Include="rtl\nls.c" />
+    <ClCompile Include="rtl\path.c" />
+    <ClCompile Include="rtl\ppb.c" />
+    <ClCompile Include="rtl\priv.c" />
+    <ClCompile Include="rtl\process.c" />
+    <ClCompile Include="rtl\propvar.c" />
+    <ClCompile Include="rtl\random.c" />
+    <ClCompile Include="rtl\rangelist.c" />
+    <ClCompile Include="rtl\registry.c" />
+    <ClCompile Include="rtl\res.c" />
+    <ClCompile Include="rtl\resource.c" />
+    <ClCompile Include="rtl\sd.c" />
+    <ClCompile Include="rtl\sid.c" />
+    <ClCompile Include="rtl\slist.c" />
+    <ClCompile Include="rtl\splaytree.c" />
+    <ClCompile Include="rtl\srw.c" />
+    <ClCompile Include="rtl\thread.c" />
+    <ClCompile Include="rtl\time.c" />
+    <ClCompile Include="rtl\timerqueue.c" />
+    <ClCompile Include="rtl\timezone.c" />
+    <ClCompile Include="rtl\unicode.c" />
+    <ClCompile Include="rtl\unicodeprefix.c" />
+    <ClCompile Include="rtl\vectoreh.c" />
+    <ClCompile Include="rtl\version.c" />
+    <ClCompile Include="rtl\wait.c" />
+    <ClCompile Include="rtl\workitem.c" />
+    <ClCompile Include="rtl\i386\abs.c" />
+    <ClCompile Include="rtl\i386\alldiv_asm.c" />
+    <ClCompile Include="rtl\i386\alldvrm_asm.c" />
+    <ClCompile Include="rtl\i386\allmul_asm.c" />
+    <ClCompile Include="rtl\i386\allrem_asm.c" />
+    <ClCompile Include="rtl\i386\allshl_asm.c" />
+    <ClCompile Include="rtl\i386\allshr_asm.c" />
+    <ClCompile Include="rtl\i386\atoi.c" />
+    <ClCompile Include="rtl\i386\atoi64.c" />
+    <ClCompile Include="aulldiv_asm.c" />
+    <ClCompile Include="rtl\i386\aulldvrm_asm.c" />
+    <ClCompile Include="rtl\i386\aullrem_asm.c" />
+    <ClCompile Include="rtl\i386\aullshr_asm.c" />
+    <ClCompile Include="rtl\i386\chkstk_asm.c" />
+    <ClCompile Include="rtl\i386\cos_asm.c" />
+    <ClCompile Include="rtl\i386\csq.c" />
+    <ClCompile Include="rtl\i386\except_2.c" />
+    <ClCompile Include="rtl\i386\fltused.c" />
+    <ClCompile Include="rtl\i386\islower.c" />
+    <ClCompile Include="rtl\i386\isprint.c" />
+    <ClCompile Include="rtl\i386\isxdigit.c" />
+    <ClCompile Include="rtl\i386\itoa.c" />
+    <ClCompile Include="rtl\i386\itoa2.c" />
+    <ClCompile Include="rtl\i386\itow.c" />
+    <ClCompile Include="rtl\i386\mbstowcs_nt.c" />
+    <ClCompile Include="rtl\i386\memchr.c" />
+    <ClCompile Include="rtl\i386\qsort.c" />
+    <ClCompile Include="rtl\i386\rand.c" />
+    <ClCompile Include="rtl\i386\seh_prolog.c" />
+    <ClCompile Include="rtl\i386\sin_asm.c" />
+    <ClCompile Include="rtl\i386\sprintf_2.c" />
+    <ClCompile Include="rtl\i386\sqrt_asm.c" />
+    <ClCompile Include="rtl\i386\string.c" />
+    <ClCompile Include="rtl\i386\strlwr.c" />
+    <ClCompile Include="rtl\i386\strncat.c" />
+    <ClCompile Include="rtl\i386\strrev.c" />
+    <ClCompile Include="rtl\i386\strset.c" />
+    <ClCompile Include="rtl\i386\strspn.c" />
+    <ClCompile Include="rtl\i386\strtoul.c" />
+    <ClCompile Include="rtl\i386\stubs.c" />
+    <ClCompile Include="rtl\i386\swprintf.c" />
+    <ClCompile Include="rtl\i386\thread_2.c" />
+    <ClCompile Include="rtl\i386\vsprintf.c" />
+    <ClCompile Include="rtl\i386\wcscspn.c" />
+    <ClCompile Include="rtl\i386\wcslwr.c" />
+    <ClCompile Include="rtl\i386\wcsncat.c" />
+    <ClCompile Include="rtl\i386\wcsrev.c" />
+    <ClCompile Include="rtl\i386\wcsset.c" />
+    <ClCompile Include="rtl\i386\wcsspn.c" />
+    <ClCompile Include="rtl\i386\wcstombs_nt.c" />
+    <ClCompile Include="rtl\i386\wcsupr.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="rtl\avlsupp.h" />
+    <ClInclude Include="rtl\heap.h" />
+    <ClInclude Include="rtl\rtl.h" />
+    <ClInclude Include="rtl\rtlavl.h" />
+    <ClInclude Include="rtl\rtlp.h" />
+    <ClInclude Include="rtl\i386\vsprintf.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="rtl\CMakeLists.txt" />
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9D218AC3-D471-4CC0-8F4C-06A2D6EFA643}</ProjectGuid>
+    <RootNamespace>uniata</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\ReactOS-0.3.15-REL-src\ntoskrnl\include;..\ReactOS-0.3.15-REL-src\include;..\ReactOS-0.3.15-REL-src\include\psdk;..\ReactOS-0.3.15-REL-src\include\ddk;..\ReactOS-0.3.15-REL-src\include\crt;..\ReactOS-0.3.15-REL-src\include\crt\msc;..\ReactOS-0.3.15-REL-src\include\reactos;..\ReactOS-0.3.15-REL-src\include\ndk;..\ReactOS-0.3.15-REL-src\include\host;..\ReactOS-0.3.15-REL-src\include\reactos\libs;..\ReactOS-0.3.15-REL-src\lib\cmlib;..\ReactOS-0.3.15-REL-src\lib\rtl;..\ReactOS-0.3.15-REL-src\include\ndk\i386;..\ReactOS-0.3.15-REL-src\modules\rosapps\applications\sysutils\utils\pice\module;..\ReactOS-0.3.15-REL-src\ntoskrnl\include\internal;..\ReactOS-0.3.15-REL-src\ntoskrnl\mm;..\ReactOS-0.3.15-REL-src\ntoskrnl;..\ReactOS-0.3.15-REL-src\include\reactos\drivers;..\ReactOS-0.3.15-REL-src\drivers\storage\class;inc;uniata;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;DBG=1;_WIN32_WINNT=0x0502;_X86_;_NTOSKRNL_;__REACTOS__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling />
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ntoskrnl.lib;hal.lib;scsiport.lib;ntstrsafe.lib;exsup.lib;int64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).sys</OutputFile>
+      <AdditionalLibraryDirectories>..\Debug;..\system32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Native</SubSystem>
+      <EntryPointSymbol>DriverEntry</EntryPointSymbol>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>if exist  $(OutDir)$(ProjectName).exp del $(OutDir)$(ProjectName).exp
+del *.user
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="uniata\id_ata.cpp" />
+    <ClCompile Include="uniata\id_badblock.cpp" />
+    <ClCompile Include="uniata\id_dma.cpp" />
+    <ClCompile Include="uniata\id_init.cpp" />
+    <ClCompile Include="uniata\id_probe.cpp" />
+    <ClCompile Include="uniata\id_queue.cpp" />
+    <ClCompile Include="uniata\id_sata.cpp" />
+    <ClCompile Include="uniata\ros_glue\ros_glue.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="uniata\atapi.h" />
+    <ClInclude Include="uniata\badblock.h" />
+    <ClInclude Include="uniata\bm_devs.h" />
+    <ClInclude Include="uniata\bsmaster.h" />
+    <ClInclude Include="uniata\config.h" />
+    <ClInclude Include="uniata\id_queue.h" />
+    <ClInclude Include="uniata\id_sata.h" />
+    <ClInclude Include="uniata\scsi.h" />
+    <ClInclude Include="uniata\srb.h" />
+    <ClInclude Include="uniata\stdafx.h" />
+    <ClInclude Include="uniata\tools.h" />
+    <ClInclude Include="uniata\uata_ctl.h" />
+    <ClInclude Include="uniata\uniata_ver.h" />
+    <ClInclude Include="uniata\inc\CrNtDecl.h" />
+    <ClInclude Include="uniata\inc\CrNtStubs.h" />
+    <ClInclude Include="uniata\inc\CrossNt.h" />
+    <ClInclude Include="uniata\inc\misc.h" />
+    <ClInclude Include="uniata\inc\PostDbgMesg.h" />
+    <ClInclude Include="uniata\inc\rwlock.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

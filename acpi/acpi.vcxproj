@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A2AF986E-B436-4E7D-BD3D-7C0910BCAADF}</ProjectGuid>
+    <RootNamespace>acpi</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <ExtensionsToDeleteOnClean>*.obj%3b*.ilk%3b*.tlb%3b*.tli%3b*.tlh%3b*.tmp%3b*.rsp%3b*.pgc%3b*.pgd%3b*.meta%3b$(TargetPath)</ExtensionsToDeleteOnClean>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\ReactOS-0.3.15-REL-src\ntoskrnl\include;..\ReactOS-0.3.15-REL-src\include;..\ReactOS-0.3.15-REL-src\include\psdk;..\ReactOS-0.3.15-REL-src\include\ddk;..\ReactOS-0.3.15-REL-src\include\crt;..\ReactOS-0.3.15-REL-src\include\crt\msc;..\ReactOS-0.3.15-REL-src\include\reactos;..\ReactOS-0.3.15-REL-src\include\ndk;..\ReactOS-0.3.15-REL-src\include\host;..\ReactOS-0.3.15-REL-src\include\reactos\libs;..\ReactOS-0.3.15-REL-src\lib\cmlib;..\ReactOS-0.3.15-REL-src\lib\rtl;..\ReactOS-0.3.15-REL-src\include\ndk\i386;..\ReactOS-0.3.15-REL-src\modules\rosapps\applications\sysutils\utils\pice\module;..\ReactOS-0.3.15-REL-src\ntoskrnl\include\internal;..\ReactOS-0.3.15-REL-src\ntoskrnl\mm;..\ReactOS-0.3.15-REL-src\ntoskrnl;..\ReactOS-0.3.15-REL-src\include\reactos\drivers;..\ReactOS-0.3.15-REL-src\drivers\storage\class;acpi\include;acpi\acpica\include;acpi\acpica\include\platform;battery\battc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;DBG=1;_WIN32_WINNT=0x0502;_X86_;_NTOSKRNL_;_NTSYSTEM_;ACPI_USE_LOCAL_CACHE;_BATTERYCLASS_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling />
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ntoskrnl.lib;hal.lib;ntstrsafe.lib;exsup.lib;int64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).sys</OutputFile>
+      <AdditionalLibraryDirectories>..\Debug;..\system32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Native</SubSystem>
+      <EntryPointSymbol>DriverEntry</EntryPointSymbol>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>if exist  $(OutDir)$(ProjectName).exp del $(OutDir)$(ProjectName).exp
+del *.user
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="battery\battc\battc.c" />
+    <ClCompile Include="acpi\acpienum.c" />
+    <ClCompile Include="acpi\buspdo.c" />
+    <ClCompile Include="acpi\eval.c" />
+    <ClCompile Include="acpi\interface.c" />
+    <ClCompile Include="acpi\main.c" />
+    <ClCompile Include="acpi\osl.c" />
+    <ClCompile Include="acpi\pnp.c" />
+    <ClCompile Include="acpi\power2.c" />
+    <ClCompile Include="acpi\compbatt\compbatt.c" />
+    <ClCompile Include="acpi\compbatt\compmisc.c" />
+    <ClCompile Include="acpi\compbatt\comppnp.c" />
+    <ClCompile Include="acpi\cmbatt\cmbatt.c" />
+    <ClCompile Include="acpi\cmbatt\cmbpnp.c" />
+    <ClCompile Include="acpi\cmbatt\cmbwmi.c" />
+    <ClCompile Include="acpi\cmbatt\cmexec.c" />
+    <ClCompile Include="acpi\busmgr\bus.c" />
+    <ClCompile Include="acpi\busmgr\button.c" />
+    <ClCompile Include="acpi\busmgr\power.c" />
+    <ClCompile Include="acpi\busmgr\system.c" />
+    <ClCompile Include="acpi\busmgr\utils.c" />
+    <ClCompile Include="acpi\acpica\dispatcher\dsargs.c" />
+    <ClCompile Include="acpi\acpica\dispatcher\dscontrol.c" />
+    <ClCompile Include="acpi\acpica\dispatcher\dsfield.c" />
+    <ClCompile Include="acpi\acpica\dispatcher\dsinit.c" />
+    <ClCompile Include="acpi\acpica\dispatcher\dsmethod.c" />
+    <ClCompile Include="acpi\acpica\dispatcher\dsmthdat.c" />
+    <ClCompile Include="acpi\acpica\dispatcher\dsobject.c" />
+    <ClCompile Include="acpi\acpica\dispatcher\dsopcode.c" />
+    <ClCompile Include="acpi\acpica\dispatcher\dsutils.c" />
+    <ClCompile Include="acpi\acpica\dispatcher\dswexec.c" />
+    <ClCompile Include="acpi\acpica\dispatcher\dswload.c" />
+    <ClCompile Include="acpi\acpica\dispatcher\dswload2.c" />
+    <ClCompile Include="acpi\acpica\dispatcher\dswscope.c" />
+    <ClCompile Include="acpi\acpica\dispatcher\dswstate.c" />
+    <ClCompile Include="acpi\acpica\events\evevent.c" />
+    <ClCompile Include="acpi\acpica\events\evglock.c" />
+    <ClCompile Include="acpi\acpica\events\evgpe.c" />
+    <ClCompile Include="acpi\acpica\events\evgpeblk.c" />
+    <ClCompile Include="acpi\acpica\events\evgpeinit.c" />
+    <ClCompile Include="acpi\acpica\events\evgpeutil.c" />
+    <ClCompile Include="acpi\acpica\events\evmisc.c" />
+    <ClCompile Include="acpi\acpica\events\evregion.c" />
+    <ClCompile Include="acpi\acpica\events\evrgnini.c" />
+    <ClCompile Include="acpi\acpica\events\evsci.c" />
+    <ClCompile Include="acpi\acpica\events\evxface.c" />
+    <ClCompile Include="acpi\acpica\events\evxfevnt.c" />
+    <ClCompile Include="acpi\acpica\events\evxfgpe.c" />
+    <ClCompile Include="acpi\acpica\events\evxfregn.c" />
+    <ClCompile Include="acpi\acpica\executer\exconfig.c" />
+    <ClCompile Include="acpi\acpica\executer\exconvrt.c" />
+    <ClCompile Include="acpi\acpica\executer\excreate.c" />
+    <ClCompile Include="acpi\acpica\executer\exdebug.c" />
+    <ClCompile Include="acpi\acpica\executer\exdump.c" />
+    <ClCompile Include="acpi\acpica\executer\exfield.c" />
+    <ClCompile Include="acpi\acpica\executer\exfldio.c" />
+    <ClCompile Include="acpi\acpica\executer\exmisc.c" />
+    <ClCompile Include="acpi\acpica\executer\exmutex.c" />
+    <ClCompile Include="acpi\acpica\executer\exnames.c" />
+    <ClCompile Include="acpi\acpica\executer\exoparg1.c" />
+    <ClCompile Include="acpi\acpica\executer\exoparg2.c" />
+    <ClCompile Include="acpi\acpica\executer\exoparg3.c" />
+    <ClCompile Include="acpi\acpica\executer\exoparg6.c" />
+    <ClCompile Include="acpi\acpica\executer\exprep.c" />
+    <ClCompile Include="acpi\acpica\executer\exregion.c" />
+    <ClCompile Include="acpi\acpica\executer\exresnte.c" />
+    <ClCompile Include="acpi\acpica\executer\exresolv.c" />
+    <ClCompile Include="acpi\acpica\executer\exresop.c" />
+    <ClCompile Include="acpi\acpica\executer\exstore.c" />
+    <ClCompile Include="acpi\acpica\executer\exstoren.c" />
+    <ClCompile Include="acpi\acpica\executer\exstorob.c" />
+    <ClCompile Include="acpi\acpica\executer\exsystem.c" />
+    <ClCompile Include="acpi\acpica\executer\exutils.c" />
+    <ClCompile Include="acpi\acpica\hardware\hwacpi.c" />
+    <ClCompile Include="acpi\acpica\hardware\hwgpe.c" />
+    <ClCompile Include="acpi\acpica\hardware\hwpci.c" />
+    <ClCompile Include="acpi\acpica\hardware\hwregs.c" />
+    <ClCompile Include="acpi\acpica\hardware\hwsleep.c" />
+    <ClCompile Include="acpi\acpica\hardware\hwtimer.c" />
+    <ClCompile Include="acpi\acpica\hardware\hwvalid.c" />
+    <ClCompile Include="acpi\acpica\hardware\hwxface.c" />
+    <ClCompile Include="acpi\acpica\namespace\nsaccess.c" />
+    <ClCompile Include="acpi\acpica\namespace\nsalloc.c" />
+    <ClCompile Include="acpi\acpica\namespace\nsdump.c" />
+    <ClCompile Include="acpi\acpica\namespace\nsdumpdv.c" />
+    <ClCompile Include="acpi\acpica\namespace\nseval.c" />
+    <ClCompile Include="acpi\acpica\namespace\nsinit.c" />
+    <ClCompile Include="acpi\acpica\namespace\nsload.c" />
+    <ClCompile Include="acpi\acpica\namespace\nsnames.c" />
+    <ClCompile Include="acpi\acpica\namespace\nsobject.c" />
+    <ClCompile Include="acpi\acpica\namespace\nsparse.c" />
+    <ClCompile Include="acpi\acpica\namespace\nspredef.c" />
+    <ClCompile Include="acpi\acpica\namespace\nsrepair.c" />
+    <ClCompile Include="acpi\acpica\namespace\nsrepair2.c" />
+    <ClCompile Include="acpi\acpica\namespace\nssearch.c" />
+    <ClCompile Include="acpi\acpica\namespace\nsutils.c" />
+    <ClCompile Include="acpi\acpica\namespace\nswalk.c" />
+    <ClCompile Include="acpi\acpica\namespace\nsxfeval.c" />
+    <ClCompile Include="acpi\acpica\namespace\nsxfname.c" />
+    <ClCompile Include="acpi\acpica\namespace\nsxfobj.c" />
+    <ClCompile Include="acpi\acpica\parser\psargs.c" />
+    <ClCompile Include="acpi\acpica\parser\psloop.c" />
+    <ClCompile Include="acpi\acpica\parser\psopcode.c" />
+    <ClCompile Include="acpi\acpica\parser\psparse.c" />
+    <ClCompile Include="acpi\acpica\parser\psscope.c" />
+    <ClCompile Include="acpi\acpica\parser\pstree.c" />
+    <ClCompile Include="acpi\acpica\parser\psutils.c" />
+    <ClCompile Include="acpi\acpica\parser\pswalk.c" />
+    <ClCompile Include="acpi\acpica\parser\psxface.c" />
+    <ClCompile Include="acpi\acpica\resources\rsaddr.c" />
+    <ClCompile Include="acpi\acpica\resources\rscalc.c" />
+    <ClCompile Include="acpi\acpica\resources\rscreate.c" />
+    <ClCompile Include="acpi\acpica\resources\rsdump.c" />
+    <ClCompile Include="acpi\acpica\resources\rsinfo.c" />
+    <ClCompile Include="acpi\acpica\resources\rsio.c" />
+    <ClCompile Include="acpi\acpica\resources\rsirq.c" />
+    <ClCompile Include="acpi\acpica\resources\rslist.c" />
+    <ClCompile Include="acpi\acpica\resources\rsmemory.c" />
+    <ClCompile Include="acpi\acpica\resources\rsmisc.c" />
+    <ClCompile Include="acpi\acpica\resources\rsutils.c" />
+    <ClCompile Include="acpi\acpica\resources\rsxface.c" />
+    <ClCompile Include="acpi\acpica\tables\tbfadt.c" />
+    <ClCompile Include="acpi\acpica\tables\tbfind.c" />
+    <ClCompile Include="acpi\acpica\tables\tbinstal.c" />
+    <ClCompile Include="acpi\acpica\tables\tbutils.c" />
+    <ClCompile Include="acpi\acpica\tables\tbxface.c" />
+    <ClCompile Include="acpi\acpica\tables\tbxfroot.c" />
+    <ClCompile Include="acpi\acpica\utilities\utalloc.c" />
+    <ClCompile Include="acpi\acpica\utilities\utcache.c" />
+    <ClCompile Include="acpi\acpica\utilities\utclib.c" />
+    <ClCompile Include="acpi\acpica\utilities\utcopy.c" />
+    <ClCompile Include="acpi\acpica\utilities\utdebug.c" />
+    <ClCompile Include="acpi\acpica\utilities\utdecode.c" />
+    <ClCompile Include="acpi\acpica\utilities\utdelete.c" />
+    <ClCompile Include="acpi\acpica\utilities\uteval.c" />
+    <ClCompile Include="acpi\acpica\utilities\utglobal.c" />
+    <ClCompile Include="acpi\acpica\utilities\utids.c" />
+    <ClCompile Include="acpi\acpica\utilities\utinit.c" />
+    <ClCompile Include="acpi\acpica\utilities\utlock.c" />
+    <ClCompile Include="acpi\acpica\utilities\utmath.c" />
+    <ClCompile Include="acpi\acpica\utilities\utmisc.c" />
+    <ClCompile Include="acpi\acpica\utilities\utmutex.c" />
+    <ClCompile Include="acpi\acpica\utilities\utobject.c" />
+    <ClCompile Include="acpi\acpica\utilities\utosi.c" />
+    <ClCompile Include="acpi\acpica\utilities\utresrc.c" />
+    <ClCompile Include="acpi\acpica\utilities\utstate.c" />
+    <ClCompile Include="acpi\acpica\utilities\uttrack.c" />
+    <ClCompile Include="acpi\acpica\utilities\utxface.c" />
+    <ClCompile Include="acpi\acpica\utilities\utxferror.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="battery\battc\battc.h" />
+    <ClInclude Include="acpi\include\acpi_bus.h" />
+    <ClInclude Include="acpi\include\acpi_drivers.h" />
+    <ClInclude Include="acpi\include\acpisys.h" />
+    <ClInclude Include="acpi\include\glue.h" />
+    <ClInclude Include="acpi\include\list.h" />
+    <ClInclude Include="acpi\compbatt\compbatt.h" />
+    <ClInclude Include="acpi\cmbatt\cmbatt.h" />
+    <ClInclude Include="acpi\acpica\include\acapps.h" />
+    <ClInclude Include="acpi\acpica\include\accommon.h" />
+    <ClInclude Include="acpi\acpica\include\acconfig.h" />
+    <ClInclude Include="acpi\acpica\include\acdebug.h" />
+    <ClInclude Include="acpi\acpica\include\acdisasm.h" />
+    <ClInclude Include="acpi\acpica\include\acdispat.h" />
+    <ClInclude Include="acpi\acpica\include\acevents.h" />
+    <ClInclude Include="acpi\acpica\include\acexcep.h" />
+    <ClInclude Include="acpi\acpica\include\acglobal.h" />
+    <ClInclude Include="acpi\acpica\include\achware.h" />
+    <ClInclude Include="acpi\acpica\include\acinterp.h" />
+    <ClInclude Include="acpi\acpica\include\aclocal.h" />
+    <ClInclude Include="acpi\acpica\include\acmacros.h" />
+    <ClInclude Include="acpi\acpica\include\acnames.h" />
+    <ClInclude Include="acpi\acpica\include\acnamesp.h" />
+    <ClInclude Include="acpi\acpica\include\acobject.h" />
+    <ClInclude Include="acpi\acpica\include\acopcode.h" />
+    <ClInclude Include="acpi\acpica\include\acoutput.h" />
+    <ClInclude Include="acpi\acpica\include\acparser.h" />
+    <ClInclude Include="acpi\acpica\include\acpi.h" />
+    <ClInclude Include="acpi\acpica\include\acpiosxf.h" />
+    <ClInclude Include="acpi\acpica\include\acpixf.h" />
+    <ClInclude Include="acpi\acpica\include\acpredef.h" />
+    <ClInclude Include="acpi\acpica\include\acresrc.h" />
+    <ClInclude Include="acpi\acpica\include\acrestyp.h" />
+    <ClInclude Include="acpi\acpica\include\acstruct.h" />
+    <ClInclude Include="acpi\acpica\include\actables.h" />
+    <ClInclude Include="acpi\acpica\include\actbl.h" />
+    <ClInclude Include="acpi\acpica\include\actbl1.h" />
+    <ClInclude Include="acpi\acpica\include\actbl2.h" />
+    <ClInclude Include="acpi\acpica\include\actbl71.h" />
+    <ClInclude Include="acpi\acpica\include\actypes.h" />
+    <ClInclude Include="acpi\acpica\include\acutils.h" />
+    <ClInclude Include="acpi\acpica\include\amlcode.h" />
+    <ClInclude Include="acpi\acpica\include\amlresrc.h" />
+    <ClInclude Include="acpi\acpica\include\platform\accygwin.h" />
+    <ClInclude Include="acpi\acpica\include\platform\acdos16.h" />
+    <ClInclude Include="acpi\acpica\include\platform\acefi.h" />
+    <ClInclude Include="acpi\acpica\include\platform\acenv.h" />
+    <ClInclude Include="acpi\acpica\include\platform\acfreebsd.h" />
+    <ClInclude Include="acpi\acpica\include\platform\acgcc.h" />
+    <ClInclude Include="acpi\acpica\include\platform\acintel.h" />
+    <ClInclude Include="acpi\acpica\include\platform\aclinux.h" />
+    <ClInclude Include="acpi\acpica\include\platform\acmsvc.h" />
+    <ClInclude Include="acpi\acpica\include\platform\acnetbsd.h" />
+    <ClInclude Include="acpi\acpica\include\platform\acos2.h" />
+    <ClInclude Include="acpi\acpica\include\platform\acwin.h" />
+    <ClInclude Include="acpi\acpica\include\platform\acwin64.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
